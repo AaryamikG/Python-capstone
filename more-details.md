@@ -100,6 +100,8 @@ Must-Have Checklist
 
 -   Support for all query types (qualitative, quantitative, complex)
 
+-   Unit tests for each agent
+
 Stretch Goals
 ----------------------------
 >🥈 Silver - complete all 3 agents
@@ -112,8 +114,6 @@ Stretch Goals
     -   Quantitative agent with SQL database integration and natural language to SQL translation
  
 > 🥇 Gold - complete all 3 agents and implement testing
-
--   Unit tests for each agent
 
 -   Integration tests for multi-agent workflows
 
@@ -148,4 +148,4 @@ Deliverables
 
 -   README with architecture diagram, setup, and usage instructions
 
--   (Stretch) Automated test suite covering agents and workflows
+-   Automated test suite covering agents and workflows
