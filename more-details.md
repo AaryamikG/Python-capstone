@@ -139,6 +139,17 @@ Tips for Success
 
 -   **Comment and document:** Help reviewers understand your design
 
+-   **Sqlite3 tip:**
+    - If you are using sqlite as your db, we need to put these lines the top of the file that's using sqlite (or chroma), which tricks the system into thinking pysqlite3 (which doesn't require gdb) is sqlite3:
+ 
+```
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+```
+
+(Reference: source: https://discuss.streamlit.io/t/issues-with-chroma-and-sqlite/47950/4)
+
 Deliverables
 ------------
 
