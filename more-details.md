@@ -121,6 +121,43 @@ Stretch Goals
 
 -   CLI interface tests
 
+- Retrieval quality
+
+  - Return source citations for every qualitative answer.
+  - Include retrieved document IDs and similarity scores.
+  - Add a minimum relevance threshold.
+  - Test questions whose answers are not in the knowledge base.
+  - Evaluate retrieval with a small set of expected documents.
+  - 
+- API 
+
+    - FastAPI/LangServe routes for each agent and the manager.
+    - Pydantic request and response schemas.
+    - /health endpoint.
+    - OpenAPI documentation.
+    - Environment-based configuration for API keys, database paths, and
+        model names.
+
+  - Structured logs for:
+      - Incoming query
+      - Selected agent
+      - Retrieved sources
+      - Generated SQL
+      - Execution time
+      - Errors
+   
+  - Manager Agent
+
+   - Support queries requiring both qualitative and quantitative
+    agents.
+
+  - Merge responses from both agents into one clearly labeled answer.
+  - Explain which agent handled each part of the query.
+  - Handle ambiguous queries by asking a clarification question.
+
+
+
+
 Resources & Support
 -------------------
 
