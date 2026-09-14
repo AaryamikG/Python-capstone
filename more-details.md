@@ -138,7 +138,8 @@ Stretch Goals
     - Environment-based configuration for API keys, database paths, and
         model names.
 
-  - Structured logs for:
+- Structured logs for:
+- 
       - Incoming query
       - Selected agent
       - Retrieved sources
@@ -146,11 +147,10 @@ Stretch Goals
       - Execution time
       - Errors
    
-  - Manager Agent
+- Manager Agent
 
    - Support queries requiring both qualitative and quantitative
     agents.
-
   - Merge responses from both agents into one clearly labeled answer.
   - Explain which agent handled each part of the query.
   - Handle ambiguous queries by asking a clarification question.
