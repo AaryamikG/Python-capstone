@@ -192,6 +192,28 @@ calls).
 To try the real Gemini integration end-to-end (a handful of real calls only), run the CLI or API
 manually with your API key set, as shown above.
 
+## Verified Example Queries
+
+These have been manually run end-to-end against the real Gemini API and confirmed working:
+
+```bash
+python -m enterprise_rag.cli.main --query "What is our company's security policy on passwords?"
+python -m enterprise_rag.cli.main --query "What's our customer churn rate?"
+python -m enterprise_rag.cli.main --query "Compare Q4 2025 sales performance across regions"
+python -m enterprise_rag.cli.main --query "How does our employee satisfaction compare to industry standards and what policies might impact this?"
+python -m enterprise_rag.cli.main --query "Tell me about it"
+python -m enterprise_rag.cli.main --query "What is our company's policy on office pets?"
+```
+
+| Query | Confirms |
+|---|---|
+| password policy | qualitative routing + citations |
+| churn rate | quantitative routing + generated SQL |
+| Q4 regions | multi-table `JOIN` + `GROUP BY` in generated SQL |
+| satisfaction vs. benchmark | complex routing, merged answer, both agents labeled |
+| "Tell me about it" | ambiguous routing, clarification question, no agent calls |
+| office pets | graceful "not covered" answer instead of a fabricated policy |
+
 ## Design Notes
 
 - **Retrieval quality**: every qualitative answer includes citations (document name, chunk id,
