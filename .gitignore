@@ -1,0 +1,22 @@
+# Environment
+.env
+.venv/
+venv/
+
+# Generated data
+data/chroma/
+data/enterprise.db
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+src/*.egg-info/
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
